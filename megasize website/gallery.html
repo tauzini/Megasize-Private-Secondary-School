@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Gallery - MEGASIZE Secondary</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .gallery-item { overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+        .gallery-item:hover { transform: scale(1.05); }
+        .gallery-item img { width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease; }
+        .gallery-item:hover img { transform: scale(1.1); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="h-12 w-12 rounded-full bg-yellow-400 flex items-center justify-center text-blue-900 font-bold text-lg border-2 border-blue-900 overflow-hidden">
+                        <img src="https://scontent.fgbe3-1.fna.fbcdn.net/v/t39.30808-6/455033928_926134769528613_7653794996977245187_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFFU9U3f6O5CaLp_u_smeBKXkzb7-1y8c9eTNvv7XLxz_QOWaK4nEQkMPB6g3KOY7EzaXMpQOLmxElGsWJLV_Hm&_nc_ohc=mV9y_vDtyDIQ7kNvwFZaXfX&_nc_oc=AdmCTe39ky7Pv_DnJT0RCmvHJIDZMC3D6xIlvBVKcAXUFNngkKZShgHqGPgz3OFlDzQ&_nc_zt=23&_nc_ht=scontent.fgbe3-1.fna&_nc_gid=Ji0SujKoHckjG9FiWttbbw&oh=00_Afdx7rF2zPGqF6lUgcz8KE_F0FuTtvFHdOend-hJ6bCw8w&oe=68E51EB1" alt="MEGASIZE Secondary Logo" class="w-full h-full object-cover">
+                    </div>
+                    <span class="ml-2 text-sm font-bold text-blue-900">MEGASIZE<br>SECONDARY SCHOOL</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-blue-900 px-3 py-2 rounded-md text-sm font-medium hover:text-yellow-500">Home</a>
+                    <a href="gallery.html" class="text-yellow-500 px-3 py-2 rounded-md text-sm font-medium border-b-2 border-yellow-500">Gallery</a>
+                    <a href="index.html#about" class="text-blue-900 px-3 py-2 rounded-md text-sm font-medium hover:text-yellow-500">About</a>
+                    <a href="index.html#academics" class="text-blue-900 px-3 py-2 rounded-md text-sm font-medium hover:text-yellow-500">Academics</a>
+                    <a href="index.html#facilities" class="text-blue-900 px-3 py-2 rounded-md text-sm font-medium hover:text-yellow-500">Facilities</a>
+                    <a href="index.html#contact" class="text-blue-900 px-3 py-2 rounded-md text-sm font-medium hover:text-yellow-500">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <a href="index.html" class="text-blue-900 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="bg-gradient-to-r from-blue-900 to-yellow-500 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-4" data-aos="fade-up">Campus Gallery</h1>
+            <p class="text-xl max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">A visual journey through our vibrant learning environment</p>
+        </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="https://static.photos/education/640x360/101" alt="Modern Classroom">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-blue-900">Smart Classrooms</h3>
+                        <p class="text-sm text-gray-600">Interactive learning spaces with modern technology</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://static.photos/technology/640x360/102" alt="Science Lab">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-blue-900">Science Laboratory</h3>
+                        <p class="text-sm text-gray-600">Fully equipped for hands-on experiments</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://static.photos/sport/640x360/103" alt="Sports Field">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-blue-900">Sports Facilities</h3>
+                        <p class="text-sm text-gray-600">Football field and basketball courts</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://static.photos/library/640x360/104" alt="School Library">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-blue-900">Resource Center</h3>
+                        <p class="text-sm text-gray-600">Quiet study areas and extensive book collection</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://static.photos/computer/640x360/105" alt="Computer Lab">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-blue-900">ICT Lab</h3>
+                        <p class="text-sm text-gray-600">Latest computers and internet access</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://static.photos/people/640x360/106" alt="Students Assembly">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-blue-900">Assembly Hall</h3>
+                        <p class="text-sm text-gray-600">Daily gatherings and special events</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+                    <img src="https://static.photos/food/640x360/107" alt="Dining Area">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-blue-900">Dining Hall</h3>
+                        <p class="text-sm text-gray-600">Nutritious meals in a clean environment</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="700">
+                    <img src="https://static.photos/outdoor/640x360/108" alt="Playground">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-blue-900">Playground</h3>
+                        <p class="text-sm text-gray-600">Safe recreational spaces for all ages</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="800">
+                    <img src="https://static.photos/office/640x360/109" alt="Admin Block">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-blue-900">Administration</h3>
+                        <p class="text-sm text-gray-600">Friendly staff ready to assist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+<footer class="bg-blue-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2023 MEGASIZE PRIVATE SECONDARY SCHOOL. All rights reserved.</p>
+            <a href="index.html" class="text-yellow-400 hover:text-yellow-300 mt-4 inline-block">← Back to Home</a>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init();
+        feather.replace();
+    </script>
+</body>
+</html>
