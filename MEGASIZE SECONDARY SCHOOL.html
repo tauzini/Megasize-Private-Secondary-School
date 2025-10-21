@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGASIZE SECONDARY PRIVATE SECONDARY SCHOOL (MESI)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smoother;
+            padding-top: 1px; /* Account for fixed navbar height */
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav.scrolled-up {
+            transform: translateY(0);
+        }
+
+        nav.scrolled-down {
+            transform: translateY(-100%);
+        }
+#vanta-globe {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 0%;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hover-grow:hover {
+            transform: scale(1.05);
+        }
+        
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+        }
+        
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #FFD700;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        
+        .floating {
+            animation: floating 5s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+<nav class="bg-white shadow-lg sticky top-0 z-50 transition-all duration-300" style="--nav-opacity: 1">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+<div class="flex-shrink-0 flex items-center" id="logo-title">
+                    <div class="h-12 w-12 rounded-full bg-yellow-400 flex items-center justify-center text-blue-900 font-bold text-lg border-2 border-blue-900 overflow-hidden">
+<img src="https://scontent.fgbe3-1.fna.fbcdn.net/v/t39.30808-6/455033928_926134769528613_7653794996977245187_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFFU9U3f6O5CaLp_u_smeBKXkzb7-1y8c9eTNvv7XLxz_QOWaK4nEQkMPB6g3KOY7EzaXMpQOLmxElGsWJLV_Hm&_nc_ohc=mV9y_vDtyDIQ7kNvwFZaXfX&_nc_oc=AdmCTe39ky7Pv_DnJT0RCmvHJIDZMC3D6xIlvBVKcAXUFNngkKZShgHqGPgz3OFlDzQ&_nc_zt=23&_nc_ht=scontent.fgbe3-1.fna&_nc_gid=Ji0SujKoHckjG9FiWttbbw&oh=00_Afdx7rF2zPGqF6lUgcz8KE_F0FuTtvFHdOend-hJ6bCw8w&oe=68E51EB1" alt="MEGASIZE Secondary Logo" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Success/Error Message Container -->
+                <div id="message-status" class="hidden fixed top-20 right-10 z-50 px-6 py-4 rounded-lg shadow-lg"></div>
+<span class="ml-2 text-sm font-bold text-blue-900 transition-opacity duration-300" id="school-title" style="opacity: var(--nav-opacity)">MEGASIZE<br>SECONDARY SCHOOL</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-blue-900 px-3 py-2 rounded-md text-sm font-medium hover-underline-animation transition-opacity duration-300" style="opacity: var(--nav-opacity)">Home</a>
+                    <a href="#about" class="text-blue-900 px-3 py-2 rounded-md text-sm font-medium hover-underline-animation transition-opacity duration-300" style="opacity: var(--nav-opacity)">About</a>
+                    <a href="#academics" class="text-blue-900 px-3 py-2 rounded-md text-sm font-medium hover-underline-animation transition-opacity duration-300" style="opacity: var(--nav-opacity)">Academics</a>
+                    <a href="gallery.html" class="text-blue-900 px-3 py-2 rounded-md text-sm font-medium hover-underline-animation transition-opacity duration-300" style="opacity: var(--nav-opacity)">Gallery</a>
+                    <a href="#facilities" class="text-blue-900 px-3 py-2 rounded-md text-sm font-medium hover-underline-animation transition-opacity duration-300" style="opacity: var(--nav-opacity)">Facilities</a>
+<a href="#contact" class="text-blue-900 px-3 py-2 rounded-md text-sm font-medium hover-underline-animation transition-opacity duration-300" style="opacity: var(--nav-opacity)">Contact</a>
+                    <a href="#admission" class="bg-blue-900 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-blue-800 transition-all duration-300" style="opacity: var(--nav-opacity)">Apply Now</a>
+</div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-blue-900 hover:text-yellow-500 focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-3 px-2 pt-2">
+            <div class="space-y-1">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-blue-900 hover:bg-yellow-50">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-blue-900 hover:bg-yellow-50">About</a>
+                <a href="#academics" class="block px-3 py-2 rounded-md text-base font-medium text-blue-900 hover:bg-yellow-50">Academics</a>
+                    <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-900 hover:bg-yellow-50">Gallery</a>
+                    <a href="#facilities" class="block px-3 py-2 rounded-md text-base font-medium text-blue-900 hover:bg-yellow-50">Facilities</a>
+<a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-blue-900 hover:bg-yellow-50">Contact</a>
+                <a href="#admission" class="block px-3 py-2 rounded-md text-base font-medium bg-blue-900 text-white text-center rounded-full">Apply Now</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section with Vanta.js Globe -->
+<div class="relative hero-gradient text-white h-[70vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://scontent.fgbe3-1.fna.fbcdn.net/v/t39.30808-6/486730451_1096081572533931_7651744082099808099_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=j63nXIgTqM4Q7kNvwEozkmy&_nc_oc=Adm4lXPri28iLCOmeFcbvflDF2bQcNDJ55-Hm8BvLHDNwJKE8XeDG3eJapkHrpq1xkw&_nc_zt=23&_nc_ht=scontent.fgbe3-1.fna&_nc_gid=1HW-h3KXw4dgy7U9m_1vqg&oh=00_AfdqTQq5Sdp6QU_od7bACfCuAKj-y8dyJLsRQ3NazpQr6w&oe=68E7FDD6'); transform: scale(1.0); filter: blur(3px); z-index: 0;"></div>
+        <div id="vanta-globe"></div>
+        <div style="position:absolute;inset:0;background:rgba(0,0,0,0.5);z-index:0;"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 hero-content">
+            <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-6">
+                    Shaping <span class="text-yellow-300">Future</span> Leaders
+                </h1>
+                <p class="max-w-2xl mx-auto text-xl mb-10">
+                    Where academic excellence meets character development in a Christ-centered environment.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#admission" class="bg-yellow-500 text-white px-8 py-4 rounded-full text-sm font-semibold hover-grow">
+Start Your Application
+                    </a>
+</div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+            <a href="#about" class="animate-bounce">
+                <i data-feather="chevron-down" class="h-10 w-10 text-white bg-blue-900 bg-opacity-50 rounded-full p-2"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-16">
+                <h2 class="text-base text-yellow-500 font-semibold tracking-wide uppercase">Why Choose MESI?</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-blue-900 sm:text-4xl">
+                    Educating <span class="text-yellow-500">Mind</span>, <span class="text-blue-600">Body</span>, and <span class="text-blue-400">Spirit</span>
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300">
+                    <div class="h-20 w-20 bg-yellow-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i data-feather="award" class="h-10 w-10 text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-blue-900 mb-4">Academic Excellence</h3>
+                    <p class="text-gray-600 text-center">
+                        Our IGCSE curriculum is designed to challenge students while providing support for all learning styles.
+                    </p>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300">
+                    <div class="h-20 w-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i data-feather="heart" class="h-10 w-10 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-blue-900 mb-4">Character Development</h3>
+                    <p class="text-gray-600 text-center">
+                        We nurture values of integrity, respect, and responsibility in a Christian environment.
+                    </p>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300">
+                    <div class="h-20 w-20 bg-blue-50 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i data-feather="users" class="h-10 w-10 text-blue-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-blue-900 mb-4">Holistic Approach</h3>
+                    <p class="text-gray-600 text-center">
+                        Balanced education with academics, sports, arts, and spiritual growth opportunities.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-20 grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="absolute -top-10 -left-10 h-64 w-64 bg-yellow-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                    <div class="absolute -bottom-8 -right-8 h-64 w-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                    <div class="relative rounded-xl overflow-hidden shadow-lg h-96">
+                        <img src="https://static.photos/education/640x360/2" alt="Students in classroom" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6">Our Mission</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        At MEGASIZE Private Secondary School, we are committed to providing a Christ-centered education that equips students with the knowledge, skills, and values they need for purposeful living and lifelong learning.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="h-5 w-5 bg-yellow-500 rounded-full"></div>
+                            </div>
+                            <p class="ml-3 text-gray-600">
+                                Small class sizes for personalized attention
+                            </p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="h-5 w-5 bg-yellow-500 rounded-full"></div>
+                            </div>
+                            <p class="ml-3 text-gray-600">
+                                Qualified and dedicated teaching staff
+                            </p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="h-5 w-5 bg-yellow-500 rounded-full"></div>
+                            </div>
+                            <p class="ml-3 text-gray-600">
+                                Modern facilities in a safe environment
+                            </p>
+                        </div>
+                    </div>
+                    <a href="#academics" class="mt-6 inline-flex items-center text-blue-600 font-medium hover-underline-animation">
+                        Learn about our academic programs
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Rating Section -->
+    <div class="py-20 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-16">
+                <h2 class="text-base text-yellow-500 font-semibold tracking-wide uppercase">Parent Satisfaction</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-blue-900 sm:text-4xl">
+                    Trusted by <span class="text-yellow-500">100+</span> Families
+                </p>
+            </div>
+            
+            <div class="text-center">
+                <div class="inline-flex items-center justify-center bg-white p-8 rounded-xl shadow-sm">
+                    <div class="text-center">
+                        <div class="flex justify-center mb-6">
+                            <i data-feather="star" class="w-10 h-10 text-yellow-400 fill-current"></i>
+                            <i data-feather="star" class="w-10 h-10 text-yellow-400 fill-current"></i>
+                            <i data-feather="star" class="w-10 h-10 text-yellow-400 fill-current"></i>
+                            <i data-feather="star" class="w-10 h-10 text-yellow-400 fill-current"></i>
+                            <i data-feather="star" class="w-10 h-10 text-gray-300 fill-current"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">4.0/5.0</h3>
+                        <p class="text-gray-600">Average rating from 100+ parent surveys</p>
+                        <div class="mt-4">
+                            <span class="text-sm text-gray-500">Based on quality of education, facilities, and student development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Academics Section -->
+    <div id="academics" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-16">
+                <h2 class="text-base text-yellow-500 font-semibold tracking-wide uppercase">Academics</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-blue-900 sm:text-4xl">
+                    Our <span class="text-yellow-500">Curriculum</span> & Programs
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-blue-900 text-white rounded-xl p-8 shadow-lg hover-grow transition-all duration-300">
+                    <h3 class="text-2xl font-bold mb-4">Junior Secondary (Form 1-3)</h3>
+                    <p class="mb-6">
+                        Our foundational program focuses on core subjects while allowing students to explore their interests through electives.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="h-5 w-5 text-yellow-400 mr-2"></i>
+                            <span>10+ subjects available with flexible electives</span>
+                        </li>
+</ul>
+                </div>
+                
+                <div class="bg-yellow-50 border border-yellow-100 rounded-xl p-8 shadow-lg hover-grow transition-all duration-300">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-900">Senior Secondary (Form 4-5)</h3>
+                    <p class="mb-6 text-gray-700">
+                        Preparing students for IGCSE examinations with specialized subject streams and university preparation.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="h-5 w-5 text-blue-900 mr-2"></i>
+                            <span class="text-gray-700">Core subjects: English, Mathematics, Sciences</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="h-5 w-5 text-blue-900 mr-2"></i>
+                            <span class="text-gray-700">Electives: Business Studies, Computer Science, Geography</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="h-5 w-5 text-blue-900 mr-2"></i>
+                            <span class="text-gray-700">Additional Mathematics for advanced students</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="h-5 w-5 text-blue-900 mr-2"></i>
+                            <span class="text-gray-700">University and career counseling</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="md:col-span-2 bg-white border border-gray-100 rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-center text-blue-900">Extracurricular Activities</h3>
+                    <div class="grid md:grid-cols-4 gap-6 text-center">
+                        <div class="p-4 rounded-lg hover:bg-blue-50 transition-colors duration-300">
+                            <div class="h-16 w-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i data-feather="music" class="h-8 w-8 text-yellow-500"></i>
+                            </div>
+                            <h4 class="font-medium text-blue-900">Music</h4>
+</div>
+                        <div class="p-4 rounded-lg hover:bg-blue-50 transition-colors duration-300">
+                            <div class="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i data-feather="users" class="h-8 w-8 text-blue-600"></i>
+                            </div>
+                            <h4 class="font-medium text-blue-900">Debate Club</h4>
+                        </div>
+                        <div class="p-4 rounded-lg hover:bg-blue-50 transition-colors duration-300">
+                            <div class="h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i data-feather="award" class="h-8 w-8 text-green-500"></i>
+                            </div>
+                            <h4 class="font-medium text-blue-900">Student Leadership</h4>
+                        </div>
+                        <div class="p-4 rounded-lg hover:bg-blue-50 transition-colors duration-300">
+                            <div class="h-16 w-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i data-feather="activity" class="h-8 w-8 text-red-500"></i>
+                            </div>
+                            <h4 class="font-medium text-blue-900">Sports Teams</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+    </div>
+
+    <!-- Facilities Section -->
+    <div id="facilities" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-16">
+                <h2 class="text-base text-yellow-500 font-semibold tracking-wide uppercase">Our Campus</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-blue-900 sm:text-4xl">
+                    Modern <span class="text-yellow-500">Facilities</span> for Learning
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden rounded-xl shadow-lg h-64 hover-grow transition-all duration-500">
+                    <img src="https://static.photos/education/640x360/6" alt="Classroom" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Smart Classrooms</h3>
+                            <p class="text-blue-100">Interactive learning environment with modern classroms</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-lg h-64 hover-grow transition-all duration-500">
+                    <img src="https://scontent.fgbe3-1.fna.fbcdn.net/v/t39.30808-6/503537466_1148968493911905_3102442419912296082_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=AwpuUMHBJikQ7kNvwEAshIf&_nc_oc=AdlEhtoacsuuxGJ0b9hKfe1WT20dHplTqsUhKP4WuPMDqtrBhoSNHl3cRlDSOjqs1QA&_nc_zt=23&_nc_ht=scontent.fgbe3-1.fna&_nc_gid=OBWH7tsZDsBAICzhP76oWg&oh=00_Afd-jeMiH39Hb-_N6YaLXsO_AnCMVCXZ07Z4Jld6B0mrUA&oe=68F77D1B" alt="Science Lab" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Science Laboratory</h3>
+                            <p class="text-blue-100">Hands-on experiments with modern equipment</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-lg h-64 hover-grow transition-all duration-500">
+                    <img src="https://scontent.fgbe3-1.fna.fbcdn.net/v/t39.30808-6/511002746_1164905155651572_8701633325597815367_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=5zhlhRYIOUsQ7kNvwGnAjPK&_nc_oc=AdnNa3QNRz-lCHLsUOmB4-BVI7hmj3gFCad1bAoguPvqDnIhkzV6uos_fhPcD0cqss0&_nc_zt=23&_nc_ht=scontent.fgbe3-1.fna&_nc_gid=t-Yup5SYCDM9h5cuw-Dg1g&oh=00_AfeM7ExwabZIyr2OB93eUIP9hyWsKcJsnqcgbnh7jjD_Xg&oe=68F77816" alt="Sports Field" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Sports Facilities</h3>
+                            <p class="text-blue-100">Football field, basketball court, volleyball court and more</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="gallery.html" class="inline-flex items-center bg-yellow-500 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105">
+                        <i data-feather="image" class="w-4 h-4 mr-2"></i>
+                        View Full Gallery
+                    </a>
+                </div>
+</div>
+            
+            <div class="mt-16 text-center">
+                <a href="#contact" class="inline-flex items-center text-blue-600 font-medium hover-underline-animation">
+                    Schedule a campus tour
+<i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admissions Section -->
+    <div id="admission" class="py-20 bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-16">
+                <h2 class="text-base text-yellow-400 font-semibold tracking-wide uppercase">Admissions</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl">
+                    Join the <span class="text-yellow-400">MESI</span> Family
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Application Process</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-yellow-400 flex items-center justify-center text-blue-900 font-bold mr-4">
+                                1
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Submit Application</h4>
+                                <p class="text-blue-200 mt-1">
+                                    Complete the online application form and pay the application fee.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-yellow-400 flex items-center justify-center text-blue-900 font-bold mr-4">
+                                2
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Entrance Assessment</h4>
+                                <p class="text-blue-200 mt-1">
+                                    Students take placement tests in English, Mathematics and Science.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-yellow-400 flex items-center justify-center text-blue-900 font-bold mr-4">
+                                3
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Interview</h4>
+                                <p class="text-blue-200 mt-1">
+                                    Meet with our admissions team to discuss your educational goals.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-yellow-400 flex items-center justify-center text-blue-900 font-bold mr-4">
+                                4
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Acceptance</h4>
+                                <p class="text-blue-200 mt-1">
+                                    Receive your admission letter and complete enrollment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <a href="#contact" class="btn-primary text-white px-8 py-4 rounded-full text-sm font-semibold hover-grow inline-flex items-center">
+                            Start Application
+<i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6">Fee Structure (2025)</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b border-gray-100 pb-3">
+                            <span class="text-gray-600">Registration Fee</span>
+                            <span class="font-medium text-blue-900">P500 (non-refundable)</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-100 pb-3">
+                            <span class="text-gray-600">Tuition Fee (Per Term)</span>
+                            <span class="font-medium text-blue-900">P8,500</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-100 pb-3">
+                            <span class="text-gray-600">Development Levy (Annual)</span>
+                            <span class="font-medium text-blue-900">None</span>
+</div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">IGCSE Examination Fees</span>
+                            <span class="font-medium text-blue-900">As per Cambridge</span>
+                        </div>
+                    </div>
+<div class="mt-8 bg-yellow-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-blue-900 mb-2">Payment Options</h4>
+                        <p class="text-sm text-gray-600">
+                            Fees can be paid in full at the beginning of the term or in three monthly installments. We offer sibling discounts and limited scholarships based on need and merit. Sports and extracurricular activities are included in tuition at no additional cost.
+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-16">
+                <h2 class="text-base text-yellow-500 font-semibold tracking-wide uppercase">Get In Touch</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-blue-900 sm:text-4xl">
+                    We'd Love to <span class="text-yellow-500">Hear</span> From You
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-500">
+                                <i data-feather="map-pin"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-blue-900">Address</h3>
+                                <p class="text-gray-600">Gaborone West Phase 4<br>Gundakuni Street<br>Plot 61737 - Along Letlhabile Primary & Opposite Madigele Clinics<br>PO Box 201432 Gaborone</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                                <i data-feather="phone"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-blue-900">Phone</h3>
+                                <p class="text-gray-600">+267 3960193<br>+267 74779346</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-green-100 flex items-center justify-center text-green-500">
+                                <i data-feather="mail"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-blue-900">Email</h3>
+                                <p class="text-gray-600">megasizesecondaryschool@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-red-100 flex items-center justify-center text-red-500">
+                                <i data-feather="clock"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-blue-900">Office Hours</h3>
+                                <p class="text-gray-600">Monday - Friday: 7:30 AM - 4:30 PM<br>Saturday: 8:00 AM - 12:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-lg font-medium text-blue-900 mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/MeSiSec.bw/" target="_blank" class="h-10 w-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-all duration-300 transform hover:scale-110 hover:rotate-12">
+                                <i data-feather="facebook"></i>
+                            </a>
+</div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6">Send Us a Message</h3>
+                    <form id="contact-form" class="space-y-4">
+<div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500">
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Admissions">Admissions</option>
+                                <option value="Feedback">Feedback</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500" required></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-yellow-500 text-white px-8 py-4 rounded-full font-bold hover:from-blue-700 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                                <i data-feather="send" class="w-5 h-5"></i>
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                    <script>
+                        document.getElementById('contact-form').addEventListener('submit', function(e) {
+                            e.preventDefault();
+                            const formData = new FormData(this);
+                            const messageStatus = document.getElementById('message-status');
+                            
+                            
+                            
+                        fetch('mail_handler.php'), {
+    method: 'POST',
+    body: formData
+                        }
+.then(response => response.json())
+.then(data => {
+    if (data.status === 'success') {
+        messageStatus.textContent = "Your message was sent successfully!";
+        messageStatus.className = "fixed top-20 right-10 z-50 px-6 py-4 rounded-lg shadow-lg bg-green-100 text-green-800";
+    } else if (data.status === 'invalid_email') {
+        messageStatus.textContent = "Please enter a valid email address!";
+        messageStatus.className = "fixed top-20 right-10 z-50 px-6 py-4 rounded-lg shadow-lg bg-red-100 text-red-800";
+    } else {
+        messageStatus.textContent = "Failed to send message. Please try again or contact us directly.";
+        messageStatus.className = "fixed top-20 right-10 z-50 px-6 py-4 rounded-lg shadow-lg bg-red-100 text-red-800";
+    }
+
+    messageStatus.classList.remove("hidden");
+    setTimeout(() => {
+        messageStatus.classList.add("hidden");
+    }, 5000);
+
+    form.reset();
+})
+.catch(error => {
+    console.error('Error:', error);
+    messageStatus.textContent = "An error occurred. Please try again later.";
+    messageStatus.className = "fixed top-20 right-10 z-50 px-6 py-4 rounded-lg shadow-lg bg-red-100 text-red-800";
+    messageStatus.classList.remove("hidden");
+    setTimeout(() => {
+        messageStatus.classList.add("hidden");
+    }, 5000);
+});
+                      });
+                    
+                    </script>
+</div>
+            </div>
+        </div>
+    </div>
+<!-- Map Section -->
+<div class="h-96 w-full bg-gray-200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.847366723062!2d25.876890641872503!3d-24.669351431780882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQwJzA5LjciUyAyNcKwNTInMzYuOCJF!5e0!3m2!1sen!2sbw!4v1620000000000!5m2!1sen!2sbw" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="h-12 w-12 rounded-full bg-yellow-400 flex items-center justify-center text-blue-900 font-bold text-lg border-2 border-white overflow-hidden">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_ZIdD2D8qPIKiqebh5r8jHsM7V3dVPmbliQ&s" alt="MEGASIZE Logo" class="w-full h-full object-cover">
+</div>
+<span class="ml-3 text-lg font-bold">MEGASIZE<br>SECONDARY SCHOOL</span>
+                    </div>
+                    <p class="text-blue-200">
+                        Providing quality Christ-centered education in Gaborone since 2008. Our mission is to develop well-rounded individuals prepared for academic success and life's challenges.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-200 hover:text-yellow-400 transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-blue-200 hover:text-yellow-400 transition-colors">About Us</a></li>
+                        <li><a href="#academics" class="text-blue-200 hover:text-yellow-400 transition-colors">Academics</a></li>
+                    <li><a href="gallery.html" class="text-blue-200 hover:text-yellow-400 transition-colors">Gallery</a></li>
+                    <li><a href="#facilities" class="text-blue-200 hover:text-yellow-400 transition-colors">Facilities</a></li>
+<li><a href="#contact" class="text-blue-200 hover:text-yellow-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Admissions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#admission" class="text-blue-200 hover:text-yellow-400 transition-colors">Application Process</a></li>
+                        <li><a href="#admission" class="text-blue-200 hover:text-yellow-400 transition-colors">Fee Structure</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-yellow-400 transition-colors">Scholarships</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-yellow-400 transition-colors">School Calendar</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-yellow-400 transition-colors">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-blue-200 mb-4">
+                        Subscribe to receive updates on school events, academic news, and more.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-md text-gray-900 w-full focus:outline-none">
+                        <button class="bg-yellow-400 text-blue-900 px-4 py-2 rounded-r-md font-medium hover:bg-yellow-500 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="https://www.facebook.com/MeSiSec.bw/" target="_blank" class="text-blue-200 hover:text-yellow-400 transition-all duration-300 transform hover:scale-110 hover:rotate-12">
+                            <i data-feather="facebook" class="w-5 h-5"></i>
+                        </a>
+</div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-blue-800 text-center text-blue-300 text-sm">
+                <p>&copy; 2023 MEGASIZE PRIVATE SECONDARY SCHOOL (MESI). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 h-12 w-12 bg-blue-900 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i data-feather="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <script>
+        // Initialize AOS animations
+        AOS.init();
+        
+        // Initialize feather icons
+        feather.replace();
+        
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Vanta.js globe background
+        VANTA.GLOBE({
+            el: "#vanta-globe",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xffd700,
+            backgroundColor: 0x1e3a8a,
+            size: 1.00
+        });
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#contact') {
+                    // Extra smooth scroll to contact form
+                    const contactSection = document.querySelector(targetId);
+                    const contactForm = document.getElementById('contactForm');
+                    contactForm.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                } else {
+                    smoothScrollTo(targetId, 1000);
+                }
+            });
+        });
+// Back to top button
+const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        // Enhanced smooth scroll function
+        function smoothScrollTo(target, duration) {
+            const targetElement = document.querySelector(target);
+            if (!targetElement) return;
+            
+            const targetPosition = targetElement.offsetTop;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = easeInOutQuint(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            // Quint easing function for smoother animation
+            function easeInOutQuint(t, b, c, d) {
+                t /= d/2;
+                if (t < 1) return c/2*t*t*t*t*t + b;
+                t -= 2;
+                return c/2*(t*t*t*t*t + 2) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+        // Enhanced smooth scroll to contact form when page loads with hash
+        if(window.location.hash === '#contact') {
+            const contactForm = document.getElementById('contactForm');
+            setTimeout(() => {
+                contactForm.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }, 100);
+        }
+// Navbar scroll effect - Simplified version
+        // Navbar scroll effect - Hide on scroll down, show on scroll up
+        let lastScroll = 0;
+        const navbar = document.querySelector('nav');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                navbar.classList.remove('scrolled-down');
+                navbar.classList.add('scrolled-up');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && !navbar.classList.contains('scrolled-down')) {
+                navbar.classList.remove('scrolled-up');
+                navbar.classList.add('scrolled-down');
+            } else if (currentScroll < lastScroll && navbar.classList.contains('scrolled-down')) {
+                navbar.classList.remove('scrolled-down');
+                navbar.classList.add('scrolled-up');
+            }
+            
+            lastScroll = currentScroll;
+        });
+</script>
+</body>
+</html>
